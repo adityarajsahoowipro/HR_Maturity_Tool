@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input"
 import { ArrowLeft, ArrowRight, CheckCircle2, Loader2, AlertCircle, Download, Share2 } from "lucide-react"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { Progress } from "@/components/ui/progress"
+import { Recommendation } from "@/components/recommendation-panel"
 
 // API URL from environment variable
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001/api"
@@ -38,18 +39,36 @@ type Option = {
 type AssessmentData = {
   categories: Category[]
 }
+type BackendAssessmentFormProps = {
+  setRecommendations: React.Dispatch<React.SetStateAction<Recommendation[]>>
+  setScore?: React.Dispatch<React.SetStateAction<number | null>>
+  setResult?: React.Dispatch<React.SetStateAction<any>>
+  organizationName: string
+  username: string
+  result?: any
+}
 
-export function BackendAssessmentForm() {
+export function BackendAssessmentForm({ setRecommendations, setScore, setResult, result, organizationName: orgNameProp, username: usernameProp, }: BackendAssessmentFormProps) {
   const [activeTab, setActiveTab] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isComplete, setIsComplete] = useState(false)
   const [answers, setAnswers] = useState<Record<string, number>>({})
   const [comments, setComments] = useState<Record<string, string>>({})
-  const [organizationName, setOrganizationName] = useState("")
+  const [organizationName, setOrganizationName] = useState(orgNameProp || "")
+  const [username, setUsername] = useState(usernameProp || "")
+
   const [assessmentData, setAssessmentData] = useState<AssessmentData | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const [result, setResult] = useState<any>(null)
+
+
+  //const [result, setResult] = useState<any>(null)
+  useEffect(() => {
+    setOrganizationName(orgNameProp || "")
+  }, [orgNameProp])
+  useEffect(() => {
+    setUsername(usernameProp || "")
+  }, [usernameProp])
 
   // Fetch questions from backend
   useEffect(() => {
@@ -103,7 +122,6 @@ export function BackendAssessmentForm() {
       setError("Please enter your organization name")
       return
     }
-
     setIsSubmitting(true)
     setError(null)
 
@@ -125,9 +143,34 @@ export function BackendAssessmentForm() {
       }
 
       const data = await response.json()
-      setResult(data.result)
+      setResult && setResult(data.result)
+
       setIsSubmitting(false)
       setIsComplete(true)
+      if (setScore && data.result?.analysis?.overallScore) {
+        setScore(data.result.analysis.overallScore)
+      }
+      const recRes = await fetch(`${API_URL}/generate-recommendations`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          currentRecommendations: [],
+          organizationContext: {
+            maturityLevel: data.result.analysis.maturityLevel,
+            focusAreas: data.result.analysis.areasForImprovement,
+            industry: data.result.organizationName || "General",
+          },
+        }),
+      })
+      const recData = await recRes.json()
+      // Handle both possible backend formats:
+      let recs = []
+      if (recData.recommendations && Array.isArray(recData.recommendations.recommendations)) {
+        recs = recData.recommendations.recommendations
+      } else if (recData.recommendations && Array.isArray(recData.recommendations)) {
+        recs = recData.recommendations
+      }
+      setRecommendations(recs)
     } catch (err) {
       console.error("Error submitting assessment:", err)
       setError("Failed to submit assessment. Please check your connection and try again.")
@@ -229,6 +272,13 @@ export function BackendAssessmentForm() {
         <p className="text-muted-foreground mb-6 max-w-md">
           Thank you for completing the HR Maturity Assessment. Your results have been analyzed using AI.
         </p>
+        <Card className="w-full max-w-2xl mb-6">
+          <CardContent className="pt-6">
+            <div className="text-lg font-medium text-center mb-4">
+              After submitting the assessment, you can see your score and detailed results in the <span className="font-bold text-emerald-600">Dashboard</span> tab.
+            </div>
+          </CardContent>
+        </Card>
 
         <Card className="w-full max-w-4xl mb-6">
           <CardContent className="pt-6">
@@ -298,43 +348,7 @@ export function BackendAssessmentForm() {
 
             <div className="mb-6">
               <h4 className="font-medium mb-3">AI-Generated Recommendations</h4>
-              <div className="space-y-3">
-                {result.analysis.recommendations.map((recommendation: any, index: number) => (
-                  <div key={index} className="border rounded-lg p-4">
-                    <div className="flex justify-between items-start mb-2">
-                      <h5 className="font-medium">{recommendation.title}</h5>
-                      <div className="flex gap-2">
-                        <span
-                          className={`px-2 py-1 rounded text-xs font-medium ${
-                            recommendation.priority === "High"
-                              ? "bg-red-100 text-red-800"
-                              : recommendation.priority === "Medium"
-                                ? "bg-yellow-100 text-yellow-800"
-                                : "bg-green-100 text-green-800"
-                          }`}
-                        >
-                          {recommendation.priority}
-                        </span>
-                        <span className="px-2 py-1 rounded text-xs font-medium bg-blue-100 text-blue-800">
-                          {recommendation.timeframe}
-                        </span>
-                      </div>
-                    </div>
-                    <p className="text-sm text-muted-foreground">{recommendation.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-medium mb-3">Next Steps</h4>
-              <ol className="list-decimal list-inside space-y-1">
-                {result.analysis.nextSteps.map((step: string, index: number) => (
-                  <li key={index} className="text-sm">
-                    {step}
-                  </li>
-                ))}
-              </ol>
+              <p>See the Recommendations tab for your personalized roadmap.</p>
             </div>
           </CardContent>
         </Card>
@@ -344,9 +358,17 @@ export function BackendAssessmentForm() {
             <Download className="h-5 w-5 mr-2" />
             Download Full Report
           </Button>
-          <Button size="lg" variant="outline" onClick={() => window.location.reload()}>
+          <Button
+            size="lg"
+            variant="outline"
+            onClick={() => {
+              localStorage.removeItem("hr-maturity-result")
+              window.location.reload()
+            }}
+          >
             Take Another Assessment
           </Button>
+
         </div>
       </div>
     )
@@ -369,22 +391,40 @@ export function BackendAssessmentForm() {
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
+      
 
-      <div className="mb-6">
+      <div className="mb-6 ">
         <div className="flex justify-between items-center mb-2">
           <Label htmlFor="organization-name" className="text-base font-medium">
-            Organization Name
+            Organization 
           </Label>
           <span className="text-sm text-muted-foreground">{getCompletionPercentage()}% Complete</span>
         </div>
         <Input
           id="organization-name"
           value={organizationName}
+          disabled
+          readOnly
           onChange={(e) => setOrganizationName(e.target.value)}
           placeholder="Enter your organization name"
-          className="mb-2"
+         className="mb-2 font-bold uppercase"
         />
-        <Progress value={getCompletionPercentage()} className="h-2" />
+        <div className="flex justify-between items-center mb-4 gap-4">
+          <Label htmlFor="organization-name" className="text-base font-medium">
+            Name
+          </Label>
+          </div>
+        <Input
+          
+          value={username}
+          disabled
+          readOnly
+          className="font-bold uppercase"
+          placeholder="Username"
+        />
+
+
+        <Progress value={getCompletionPercentage()} className="h-2 mt-4" />
       </div>
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -433,7 +473,7 @@ export function BackendAssessmentForm() {
                           </div>
                         ))}
                       </RadioGroup>
-                      <div>
+                      {/* <div>
                         <Label htmlFor={`comment-${question.id}`} className="text-sm text-muted-foreground">
                           Additional comments (optional)
                         </Label>
@@ -445,7 +485,7 @@ export function BackendAssessmentForm() {
                           placeholder="Add any specific details or context..."
                           rows={2}
                         />
-                      </div>
+                      </div> */}
                     </div>
                   ))}
                 </div>

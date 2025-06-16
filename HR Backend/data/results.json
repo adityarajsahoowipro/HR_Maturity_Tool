@@ -1,695 +1,13 @@
 [
   {
-    "id": "1748426276510",
-    "organizationName": "wipro",
-    "submittedAt": "2025-05-28T09:57:56.510Z",
-    "answers": {
-      "p1": 3,
-      "p2": 2,
-      "pr1": 1,
-      "pr2": 2,
-      "a1": 2,
-      "a2": 3,
-      "d1": 5,
-      "h1": 4
-    },
-    "comments": {},
-    "analysis": {
-      "overallScore": 3.2,
-      "categoryScores": {
-        "people-skills": 3.5,
-        "processes": 2.8,
-        "systems-technology": 3,
-        "ai-adoption": 2.6,
-        "data-readiness": 3.1,
-        "hybrid-work": 3.8
-      },
-      "strengths": [
-        "Good foundation in digital literacy",
-        "Beginning to adopt skills-based approaches",
-        "Strong hybrid work model implementation",
-        "Commitment to employee development"
-      ],
-      "areasForImprovement": [
-        "Limited AI adoption across HR functions",
-        "Immature data governance practices",
-        "Manual processes still prevalent in key areas",
-        "Need for more integrated technology stack"
-      ],
-      "recommendations": [
-        {
-          "title": "Implement AI-powered skills assessment",
-          "description": "Deploy an AI-based skills assessment tool to identify skill gaps and create personalized development plans",
-          "priority": "High",
-          "category": "People & Skills",
-          "timeframe": "Medium-term"
-        },
-        {
-          "title": "Automate routine HR processes",
-          "description": "Identify and automate repetitive HR tasks using workflow automation and AI",
-          "priority": "High",
-          "category": "Processes",
-          "timeframe": "Short-term"
-        },
-        {
-          "title": "Develop data governance framework",
-          "description": "Create a comprehensive data governance framework to ensure data quality and accessibility",
-          "priority": "Medium",
-          "category": "Data Readiness",
-          "timeframe": "Medium-term"
-        }
-      ],
-      "maturityLevel": "Transitioning - Moving from traditional to modern HR practices",
-      "nextSteps": [
-        "Conduct detailed AI readiness assessment",
-        "Prioritize process automation opportunities",
-        "Establish data quality standards",
-        "Create change management plan for digital transformation"
-      ]
-    }
-  },
-  {
-    "id": "1748426785032",
-    "organizationName": "wipro",
-    "submittedAt": "2025-05-28T10:06:25.032Z",
+    "id": "1749554547472",
+    "organizationName": "dsa",
+    "submittedAt": "2025-06-10T11:22:27.472Z",
     "answers": {
       "p1": 1,
-      "p2": 3,
-      "pr1": 4,
-      "pr2": 5,
-      "a1": 3,
-      "a2": 4,
-      "d1": 2,
-      "h1": 4
-    },
-    "comments": {},
-    "analysis": {
-      "overallScore": 3.2,
-      "categoryScores": {
-        "people-skills": 3.5,
-        "processes": 2.8,
-        "systems-technology": 3,
-        "ai-adoption": 2.6,
-        "data-readiness": 3.1,
-        "hybrid-work": 3.8
-      },
-      "strengths": [
-        "Good foundation in digital literacy",
-        "Beginning to adopt skills-based approaches",
-        "Strong hybrid work model implementation",
-        "Commitment to employee development"
-      ],
-      "areasForImprovement": [
-        "Limited AI adoption across HR functions",
-        "Immature data governance practices",
-        "Manual processes still prevalent in key areas",
-        "Need for more integrated technology stack"
-      ],
-      "recommendations": [
-        {
-          "title": "Implement AI-powered skills assessment",
-          "description": "Deploy an AI-based skills assessment tool to identify skill gaps and create personalized development plans",
-          "priority": "High",
-          "category": "People & Skills",
-          "timeframe": "Medium-term"
-        },
-        {
-          "title": "Automate routine HR processes",
-          "description": "Identify and automate repetitive HR tasks using workflow automation and AI",
-          "priority": "High",
-          "category": "Processes",
-          "timeframe": "Short-term"
-        },
-        {
-          "title": "Develop data governance framework",
-          "description": "Create a comprehensive data governance framework to ensure data quality and accessibility",
-          "priority": "Medium",
-          "category": "Data Readiness",
-          "timeframe": "Medium-term"
-        }
-      ],
-      "maturityLevel": "Transitioning - Moving from traditional to modern HR practices",
-      "nextSteps": [
-        "Conduct detailed AI readiness assessment",
-        "Prioritize process automation opportunities",
-        "Establish data quality standards",
-        "Create change management plan for digital transformation"
-      ]
-    }
-  },
-  {
-    "id": "1748427355857",
-    "organizationName": "wipro",
-    "submittedAt": "2025-05-28T10:15:55.857Z",
-    "answers": {
-      "p1": 1,
-      "p2": 1,
-      "pr1": 3,
-      "pr2": 4,
-      "a2": 3,
-      "a1": 5,
-      "d1": 4,
-      "h1": 4
-    },
-    "comments": {},
-    "analysis": {
-      "overallScore": 3.2,
-      "categoryScores": {
-        "people-skills": 3.5,
-        "processes": 2.8,
-        "systems-technology": 3,
-        "ai-adoption": 2.6,
-        "data-readiness": 3.1,
-        "hybrid-work": 3.8
-      },
-      "strengths": [
-        "Good foundation in digital literacy",
-        "Beginning to adopt skills-based approaches",
-        "Strong hybrid work model implementation",
-        "Commitment to employee development"
-      ],
-      "areasForImprovement": [
-        "Limited AI adoption across HR functions",
-        "Immature data governance practices",
-        "Manual processes still prevalent in key areas",
-        "Need for more integrated technology stack"
-      ],
-      "recommendations": [
-        {
-          "title": "Implement AI-powered skills assessment",
-          "description": "Deploy an AI-based skills assessment tool to identify skill gaps and create personalized development plans",
-          "priority": "High",
-          "category": "People & Skills",
-          "timeframe": "Medium-term"
-        },
-        {
-          "title": "Automate routine HR processes",
-          "description": "Identify and automate repetitive HR tasks using workflow automation and AI",
-          "priority": "High",
-          "category": "Processes",
-          "timeframe": "Short-term"
-        },
-        {
-          "title": "Develop data governance framework",
-          "description": "Create a comprehensive data governance framework to ensure data quality and accessibility",
-          "priority": "Medium",
-          "category": "Data Readiness",
-          "timeframe": "Medium-term"
-        }
-      ],
-      "maturityLevel": "Transitioning - Moving from traditional to modern HR practices",
-      "nextSteps": [
-        "Conduct detailed AI readiness assessment",
-        "Prioritize process automation opportunities",
-        "Establish data quality standards",
-        "Create change management plan for digital transformation"
-      ]
-    }
-  },
-  {
-    "id": "1748427903428",
-    "organizationName": "wipro",
-    "submittedAt": "2025-05-28T10:25:03.429Z",
-    "answers": {
-      "p1": 1,
-      "p2": 1,
-      "pr1": 3,
-      "pr2": 3,
-      "a1": 3,
-      "a2": 5,
-      "d1": 2,
-      "h1": 4
-    },
-    "comments": {},
-    "analysis": {
-      "overallScore": 3.2,
-      "categoryScores": {
-        "people-skills": 3.5,
-        "processes": 2.8,
-        "systems-technology": 3,
-        "ai-adoption": 2.6,
-        "data-readiness": 3.1,
-        "hybrid-work": 3.8
-      },
-      "strengths": [
-        "Good foundation in digital literacy",
-        "Beginning to adopt skills-based approaches",
-        "Strong hybrid work model implementation",
-        "Commitment to employee development"
-      ],
-      "areasForImprovement": [
-        "Limited AI adoption across HR functions",
-        "Immature data governance practices",
-        "Manual processes still prevalent in key areas",
-        "Need for more integrated technology stack"
-      ],
-      "recommendations": [
-        {
-          "title": "Implement AI-powered skills assessment",
-          "description": "Deploy an AI-based skills assessment tool to identify skill gaps and create personalized development plans",
-          "priority": "High",
-          "category": "People & Skills",
-          "timeframe": "Medium-term"
-        },
-        {
-          "title": "Automate routine HR processes",
-          "description": "Identify and automate repetitive HR tasks using workflow automation and AI",
-          "priority": "High",
-          "category": "Processes",
-          "timeframe": "Short-term"
-        },
-        {
-          "title": "Develop data governance framework",
-          "description": "Create a comprehensive data governance framework to ensure data quality and accessibility",
-          "priority": "Medium",
-          "category": "Data Readiness",
-          "timeframe": "Medium-term"
-        }
-      ],
-      "maturityLevel": "Transitioning - Moving from traditional to modern HR practices",
-      "nextSteps": [
-        "Conduct detailed AI readiness assessment",
-        "Prioritize process automation opportunities",
-        "Establish data quality standards",
-        "Create change management plan for digital transformation"
-      ]
-    }
-  },
-  {
-    "id": "1748428052111",
-    "organizationName": "wipro",
-    "submittedAt": "2025-05-28T10:27:32.111Z",
-    "answers": {
-      "p1": 2,
-      "p2": 2,
-      "pr1": 3,
-      "pr2": 4,
-      "a1": 3,
-      "a2": 3,
-      "d1": 3,
-      "h1": 4
-    },
-    "comments": {},
-    "analysis": {
-      "overallScore": 3.2,
-      "categoryScores": {
-        "people-skills": 3.5,
-        "processes": 2.8,
-        "systems-technology": 3,
-        "ai-adoption": 2.6,
-        "data-readiness": 3.1,
-        "hybrid-work": 3.8
-      },
-      "strengths": [
-        "Good foundation in digital literacy",
-        "Beginning to adopt skills-based approaches",
-        "Strong hybrid work model implementation",
-        "Commitment to employee development"
-      ],
-      "areasForImprovement": [
-        "Limited AI adoption across HR functions",
-        "Immature data governance practices",
-        "Manual processes still prevalent in key areas",
-        "Need for more integrated technology stack"
-      ],
-      "recommendations": [
-        {
-          "title": "Implement AI-powered skills assessment",
-          "description": "Deploy an AI-based skills assessment tool to identify skill gaps and create personalized development plans",
-          "priority": "High",
-          "category": "People & Skills",
-          "timeframe": "Medium-term"
-        },
-        {
-          "title": "Automate routine HR processes",
-          "description": "Identify and automate repetitive HR tasks using workflow automation and AI",
-          "priority": "High",
-          "category": "Processes",
-          "timeframe": "Short-term"
-        },
-        {
-          "title": "Develop data governance framework",
-          "description": "Create a comprehensive data governance framework to ensure data quality and accessibility",
-          "priority": "Medium",
-          "category": "Data Readiness",
-          "timeframe": "Medium-term"
-        }
-      ],
-      "maturityLevel": "Transitioning - Moving from traditional to modern HR practices",
-      "nextSteps": [
-        "Conduct detailed AI readiness assessment",
-        "Prioritize process automation opportunities",
-        "Establish data quality standards",
-        "Create change management plan for digital transformation"
-      ]
-    }
-  },
-  {
-    "id": "1748428223958",
-    "organizationName": "wipro",
-    "submittedAt": "2025-05-28T10:30:23.958Z",
-    "answers": {
-      "p1": 4,
       "p2": 4,
       "pr1": 4,
-      "pr2": 4,
-      "a1": 4,
-      "a2": 4,
-      "d1": 3,
-      "h1": 3
-    },
-    "comments": {},
-    "analysis": {
-      "overallScore": 3.2,
-      "categoryScores": {
-        "people-skills": 3.5,
-        "processes": 2.8,
-        "systems-technology": 3,
-        "ai-adoption": 2.6,
-        "data-readiness": 3.1,
-        "hybrid-work": 3.8
-      },
-      "strengths": [
-        "Good foundation in digital literacy",
-        "Beginning to adopt skills-based approaches",
-        "Strong hybrid work model implementation",
-        "Commitment to employee development"
-      ],
-      "areasForImprovement": [
-        "Limited AI adoption across HR functions",
-        "Immature data governance practices",
-        "Manual processes still prevalent in key areas",
-        "Need for more integrated technology stack"
-      ],
-      "recommendations": [
-        {
-          "title": "Implement AI-powered skills assessment",
-          "description": "Deploy an AI-based skills assessment tool to identify skill gaps and create personalized development plans",
-          "priority": "High",
-          "category": "People & Skills",
-          "timeframe": "Medium-term"
-        },
-        {
-          "title": "Automate routine HR processes",
-          "description": "Identify and automate repetitive HR tasks using workflow automation and AI",
-          "priority": "High",
-          "category": "Processes",
-          "timeframe": "Short-term"
-        },
-        {
-          "title": "Develop data governance framework",
-          "description": "Create a comprehensive data governance framework to ensure data quality and accessibility",
-          "priority": "Medium",
-          "category": "Data Readiness",
-          "timeframe": "Medium-term"
-        }
-      ],
-      "maturityLevel": "Transitioning - Moving from traditional to modern HR practices",
-      "nextSteps": [
-        "Conduct detailed AI readiness assessment",
-        "Prioritize process automation opportunities",
-        "Establish data quality standards",
-        "Create change management plan for digital transformation"
-      ]
-    }
-  },
-  {
-    "id": "1748428409882",
-    "organizationName": "wipro",
-    "submittedAt": "2025-05-28T10:33:29.882Z",
-    "answers": {
-      "p1": 2,
-      "p2": 3,
-      "pr1": 3,
-      "pr2": 4,
-      "a1": 4,
-      "a2": 4,
-      "d1": 3,
-      "h1": 3
-    },
-    "comments": {},
-    "analysis": {
-      "overallScore": 3.2,
-      "categoryScores": {
-        "people-skills": 3.5,
-        "processes": 2.8,
-        "systems-technology": 3,
-        "ai-adoption": 2.6,
-        "data-readiness": 3.1,
-        "hybrid-work": 3.8
-      },
-      "strengths": [
-        "Good foundation in digital literacy",
-        "Beginning to adopt skills-based approaches",
-        "Strong hybrid work model implementation",
-        "Commitment to employee development"
-      ],
-      "areasForImprovement": [
-        "Limited AI adoption across HR functions",
-        "Immature data governance practices",
-        "Manual processes still prevalent in key areas",
-        "Need for more integrated technology stack"
-      ],
-      "recommendations": [
-        {
-          "title": "Implement AI-powered skills assessment",
-          "description": "Deploy an AI-based skills assessment tool to identify skill gaps and create personalized development plans",
-          "priority": "High",
-          "category": "People & Skills",
-          "timeframe": "Medium-term"
-        },
-        {
-          "title": "Automate routine HR processes",
-          "description": "Identify and automate repetitive HR tasks using workflow automation and AI",
-          "priority": "High",
-          "category": "Processes",
-          "timeframe": "Short-term"
-        },
-        {
-          "title": "Develop data governance framework",
-          "description": "Create a comprehensive data governance framework to ensure data quality and accessibility",
-          "priority": "Medium",
-          "category": "Data Readiness",
-          "timeframe": "Medium-term"
-        }
-      ],
-      "maturityLevel": "Transitioning - Moving from traditional to modern HR practices",
-      "nextSteps": [
-        "Conduct detailed AI readiness assessment",
-        "Prioritize process automation opportunities",
-        "Establish data quality standards",
-        "Create change management plan for digital transformation"
-      ]
-    }
-  },
-  {
-    "id": "1748429914240",
-    "organizationName": "wipro",
-    "submittedAt": "2025-05-28T10:58:34.240Z",
-    "answers": {
-      "p1": 5,
-      "p2": 4,
-      "pr1": 1,
       "pr2": 2,
-      "a1": 3,
-      "a2": 3,
-      "d1": 3,
-      "h1": 5
-    },
-    "comments": {},
-    "analysis": {
-      "overallScore": 3.2,
-      "categoryScores": {
-        "people-skills": 3.5,
-        "processes": 2.8,
-        "systems-technology": 3,
-        "ai-adoption": 2.6,
-        "data-readiness": 3.1,
-        "hybrid-work": 3.8
-      },
-      "strengths": [
-        "Good foundation in digital literacy",
-        "Beginning to adopt skills-based approaches",
-        "Strong hybrid work model implementation",
-        "Commitment to employee development"
-      ],
-      "areasForImprovement": [
-        "Limited AI adoption across HR functions",
-        "Immature data governance practices",
-        "Manual processes still prevalent in key areas",
-        "Need for more integrated technology stack"
-      ],
-      "recommendations": [
-        {
-          "title": "Implement AI-powered skills assessment",
-          "description": "Deploy an AI-based skills assessment tool to identify skill gaps and create personalized development plans",
-          "priority": "High",
-          "category": "People & Skills",
-          "timeframe": "Medium-term"
-        },
-        {
-          "title": "Automate routine HR processes",
-          "description": "Identify and automate repetitive HR tasks using workflow automation and AI",
-          "priority": "High",
-          "category": "Processes",
-          "timeframe": "Short-term"
-        },
-        {
-          "title": "Develop data governance framework",
-          "description": "Create a comprehensive data governance framework to ensure data quality and accessibility",
-          "priority": "Medium",
-          "category": "Data Readiness",
-          "timeframe": "Medium-term"
-        }
-      ],
-      "maturityLevel": "Transitioning - Moving from traditional to modern HR practices",
-      "nextSteps": [
-        "Conduct detailed AI readiness assessment",
-        "Prioritize process automation opportunities",
-        "Establish data quality standards",
-        "Create change management plan for digital transformation"
-      ]
-    }
-  },
-  {
-    "id": "1748430095793",
-    "organizationName": "wipro",
-    "submittedAt": "2025-05-28T11:01:35.793Z",
-    "answers": {
-      "p1": 1,
-      "p2": 2,
-      "pr1": 3,
-      "pr2": 5,
-      "a1": 4,
-      "a2": 5,
-      "d1": 2,
-      "h1": 3
-    },
-    "comments": {},
-    "analysis": {
-      "overallScore": 3,
-      "categoryScores": {
-        "people-skills": 1.5,
-        "processes": 4,
-        "ai-adoption": 4.5,
-        "data-readiness": 2,
-        "hybrid-work": 3
-      },
-      "strengths": [
-        "Advanced AI governance framework",
-        "Fully data-driven HR processes"
-      ],
-      "areasForImprovement": [
-        "Digital literacy and AI readiness",
-        "Quality and accessibility of HR data",
-        "Skills-based talent management"
-      ],
-      "recommendations": [
-        {
-          "title": "Enhance Digital Literacy",
-          "description": "Implement a comprehensive digital literacy program aimed at increasing AI readiness and upskilling employees in basic digital skills.",
-          "priority": "High",
-          "category": "People & Skills",
-          "timeframe": "Short-term"
-        },
-        {
-          "title": "Develop Skills-Based Talent Management",
-          "description": "Transition more fully to a skills-based approach in talent management, including the integration of skills assessment tools and training programs.",
-          "priority": "Medium",
-          "category": "People & Skills",
-          "timeframe": "Medium-term"
-        },
-        {
-          "title": "Improve HR Data Quality",
-          "description": "Initiate projects to cleanse data, address data quality issues, and improve the accessibility of HR data to leverage for strategic decision-making.",
-          "priority": "Medium",
-          "category": "Data Readiness",
-          "timeframe": "Medium-term"
-        }
-      ],
-      "maturityLevel": "Developing - Your organization shows potential in AI and data-driven processes but needs improvement in foundational digital skills and data quality.",
-      "nextSteps": [
-        "Conduct a skills gap analysis to identify critical areas needing digital upskilling.",
-        "Establish a task force to address HR data quality and accessibility issues.",
-        "Review and improve existing HR processes to incorporate a more skills-focused approach."
-      ]
-    }
-  },
-  {
-    "id": "1748430196625",
-    "organizationName": "wipro",
-    "submittedAt": "2025-05-28T11:03:16.625Z",
-    "answers": {
-      "p1": 5,
-      "p2": 5,
-      "pr1": 5,
-      "pr2": 5,
-      "a1": 5,
-      "a2": 5,
-      "d1": 5,
-      "h1": 5
-    },
-    "comments": {},
-    "analysis": {
-      "overallScore": 5,
-      "categoryScores": {
-        "people-skills": 5,
-        "processes": 5,
-        "ai-adoption": 5,
-        "data-readiness": 5,
-        "hybrid-work": 5
-      },
-      "strengths": [
-        "Advanced digital literacy and AI readiness",
-        "Fully skills-based talent management",
-        "End-to-end process automation with AI optimization",
-        "Advanced analytics and predictive modeling in HR processes",
-        "Full AI adoption across all HR functions",
-        "Mature AI governance framework",
-        "High-quality, accessible HR data with advanced analytics",
-        "AI-optimized hybrid work model"
-      ],
-      "areasForImprovement": [],
-      "recommendations": [
-        {
-          "title": "Continuous Learning and Development",
-          "description": "Despite high levels of digital literacy and AI readiness, it is crucial to maintain a continuous learning culture to keep up with evolving technologies and methodologies. This includes regular training sessions, workshops, and certifications in emerging AI applications and data analytics.",
-          "priority": "Medium",
-          "category": "People & Skills",
-          "timeframe": "Medium-term"
-        },
-        {
-          "title": "Enhanced AI Ethics and Privacy Measures",
-          "description": "As AI adoption and data analytics are at an advanced stage, ensuring robust ethical standards and privacy measures are in place is pivotal. This involves regular audits, adherence to global standards, and transparency in AI decision-making processes.",
-          "priority": "High",
-          "category": "AI Adoption",
-          "timeframe": "Short-term"
-        },
-        {
-          "title": "Expand Data-Driven HR Strategies",
-          "description": "Leverage your advanced data analytics capabilities to further refine HR strategies, including personalized employee engagement programs and predictive attrition models, which can enhance employee satisfaction and retention.",
-          "priority": "Medium",
-          "category": "Processes",
-          "timeframe": "Medium-term"
-        }
-      ],
-      "maturityLevel": "Advanced - Your organization exhibits a highly mature, innovative, and forward-thinking approach in all assessed HR domains.",
-      "nextSteps": [
-        "Initiate an annual review of AI and data analytics capabilities to ensure continuous improvement.",
-        "Develop a task force to focus on AI ethics and implement the latest best practices and standards.",
-        "Conduct bi-annual training for all HR personnel to keep them updated with the latest tools and technologies."
-      ]
-    }
-  },
-  {
-    "id": "1748500516705",
-    "organizationName": "Wipro",
-    "submittedAt": "2025-05-29T06:35:16.705Z",
-    "answers": {
-      "p1": 1,
-      "p2": 4,
-      "pr1": 3,
-      "pr2": 3,
       "a1": 3,
       "a2": 3,
       "d1": 3,
@@ -706,50 +24,487 @@
         "hybrid-work": 4
       },
       "strengths": [
-        "Significant skills-based approach to talent management",
-        "Advanced hybrid work model optimized for both remote and office work",
-        "Initial AI adoption in HR functions"
+        "Skills-based approach to talent management",
+        "Mostly automated core HR processes",
+        "Advanced hybrid work model"
       ],
       "areasForImprovement": [
-        "Digital literacy and AI readiness among employees",
-        "Full automation and data-driven approach in HR processes",
-        "Development of a more robust AI governance framework"
+        "Digital literacy and AI readiness",
+        "Data-driven HR processes",
+        "Quality and accessibility of HR data"
       ],
       "recommendations": [
         {
           "title": "Enhance Digital Literacy",
-          "description": "Develop and implement a comprehensive digital literacy training program aimed at enhancing basic digital skills across the organization. This program should include AI awareness to prepare the workforce for future technological integrations.",
+          "description": "Implement a comprehensive digital literacy training program to improve employee proficiency in digital skills and AI technologies.",
+          "priority": "High",
+          "category": "People & Skills",
+          "timeframe": "Short-term"
+        },
+        {
+          "title": "Adopt Data-driven Decision Making",
+          "description": "Upgrade HR systems to incorporate advanced data analytics tools for better data-driven decision making across all HR processes.",
+          "priority": "Medium",
+          "category": "Processes",
+          "timeframe": "Medium-term"
+        },
+        {
+          "title": "Improve HR Data Quality and Accessibility",
+          "description": "Invest in data management solutions that enhance the quality and accessibility of HR data, facilitating more effective and timely decision-making.",
+          "priority": "Medium",
+          "category": "Data Readiness",
+          "timeframe": "Medium-term"
+        },
+        {
+          "title": "Expand AI Integration",
+          "description": "Expand the use of AI beyond pilot projects to more HR functions, ensuring alignment with AI governance policies.",
+          "priority": "Medium",
+          "category": "AI Adoption",
+          "timeframe": "Long-term"
+        }
+      ],
+      "maturityLevel": "Developing - Showing progress in automation and hybrid work, but needs enhancement in digital skills and data-driven processes.",
+      "nextSteps": [
+        "Conduct a skills gap analysis specifically focusing on digital skills.",
+        "Formulate a strategic plan for integrating AI into various HR domains.",
+        "Review and enhance the data management and analytics capabilities."
+      ]
+    }
+  },
+  {
+    "id": "1749554722824",
+    "organizationName": "sabdnkdsna",
+    "submittedAt": "2025-06-10T11:25:22.824Z",
+    "answers": {
+      "p1": 2,
+      "p2": 4,
+      "pr1": 4,
+      "pr2": 4,
+      "a1": 4,
+      "a2": 4,
+      "d1": 3,
+      "h1": 4
+    },
+    "comments": {},
+    "analysis": {
+      "overallScore": 3.6,
+      "categoryScores": {
+        "people-skills": 3,
+        "processes": 4,
+        "ai-adoption": 4,
+        "data-readiness": 3,
+        "hybrid-work": 4
+      },
+      "strengths": [
+        "Significant skills-based talent management",
+        "Most processes and decisions are data-driven and automated",
+        "Partial AI adoption in HR functions with a comprehensive AI governance framework",
+        "Advanced hybrid work model optimized for flexibility"
+      ],
+      "areasForImprovement": [
+        "Digital literacy and AI readiness across the organization",
+        "Quality and accessibility of HR data"
+      ],
+      "recommendations": [
+        {
+          "title": "Enhance Digital Literacy and AI Readiness",
+          "description": "Implement training programs focused on increasing digital literacy and understanding of AI technologies across all levels of the organization. This will set a foundation for broader and more effective use of AI.",
+          "priority": "High",
+          "category": "People & Skills",
+          "timeframe": "Short-term"
+        },
+        {
+          "title": "Improve HR Data Quality and Accessibility",
+          "description": "Invest in data management solutions that enhance the quality and ease of access to HR data. This can include data cleansing initiatives and the implementation of more user-friendly data platforms.",
+          "priority": "Medium",
+          "category": "Data Readiness",
+          "timeframe": "Medium-term"
+        }
+      ],
+      "maturityLevel": "Advanced in many areas, but with specific opportunities for improvement that can elevate the organization's HR operations to new heights.",
+      "nextSteps": [
+        "Conduct a digital literacy audit to identify specific gaps in knowledge and readiness.",
+        "Plan and execute targeted digital literacy training and AI workshops.",
+        "Assess current data management systems and identify tools or services to improve data quality and accessibility.",
+        "Review and monitor the impact of the new systems and training on HR operations and overall business outcomes."
+      ]
+    }
+  },
+  {
+    "id": "1749555760324",
+    "organizationName": "sabdnkdsna",
+    "submittedAt": "2025-06-10T11:42:40.324Z",
+    "answers": {
+      "p1": 1,
+      "p2": 3,
+      "pr1": 3,
+      "pr2": 3,
+      "a2": 2,
+      "a1": 3,
+      "d1": 2,
+      "h1": 3
+    },
+    "comments": {},
+    "analysis": {
+      "overallScore": 2.6,
+      "categoryScores": {
+        "people-skills": 2,
+        "processes": 3,
+        "ai-adoption": 2.5,
+        "data-readiness": 2,
+        "hybrid-work": 3
+      },
+      "strengths": [
+        "Moderate adoption of hybrid work models",
+        "Partial automation and data-driven HR processes"
+      ],
+      "areasForImprovement": [
+        "Digital literacy and AI readiness",
+        "AI governance framework",
+        "Quality and accessibility of HR data"
+      ],
+      "recommendations": [
+        {
+          "title": "Enhance Digital Literacy",
+          "description": "Implement comprehensive digital literacy training programs targeted at all levels of the organization to improve AI readiness and digital skills.",
+          "priority": "High",
+          "category": "People & Skills",
+          "timeframe": "Short-term"
+        },
+        {
+          "title": "Develop AI Governance Framework",
+          "description": "Formalize an AI governance framework to ensure ethical, transparent, and effective use of AI within HR functions.",
+          "priority": "Medium",
+          "category": "AI Adoption",
+          "timeframe": "Medium-term"
+        },
+        {
+          "title": "Improve Data Quality",
+          "description": "Initiate projects aimed at enhancing the quality and accessibility of HR data to support more data-driven decision making.",
+          "priority": "High",
+          "category": "Data Readiness",
+          "timeframe": "Short-term"
+        }
+      ],
+      "maturityLevel": "Developing - The organization is in the early stages of adopting modern HR practices and technologies, with significant room for improvement.",
+      "nextSteps": [
+        "Conduct a digital skills gap analysis",
+        "Plan and execute targeted training programs",
+        "Establish a cross-functional team to oversee AI implementation",
+        "Audit current HR data systems for improvements"
+      ]
+    }
+  },
+  {
+    "id": "1749630478543",
+    "organizationName": "dsoajd",
+    "submittedAt": "2025-06-11T08:27:58.543Z",
+    "answers": {
+      "p1": 2,
+      "p2": 4,
+      "pr1": 3,
+      "pr2": 4,
+      "a1": 3,
+      "a2": 4,
+      "d1": 3,
+      "h1": 4
+    },
+    "comments": {},
+    "analysis": {
+      "overallScore": 3.4,
+      "categoryScores": {
+        "people-skills": 3,
+        "processes": 3.5,
+        "ai-adoption": 3.5,
+        "data-readiness": 3,
+        "hybrid-work": 4
+      },
+      "strengths": [
+        "Significant adoption of a skills-based approach to talent management",
+        "Mostly data-driven HR processes",
+        "Advanced hybrid work model",
+        "Established AI governance framework"
+      ],
+      "areasForImprovement": [
+        "Low digital literacy and AI readiness",
+        "Average quality and accessibility of HR data",
+        "Initial stage of AI adoption in HR functions"
+      ],
+      "recommendations": [
+        {
+          "title": "Enhance Digital Literacy",
+          "description": "Implement organization-wide training programs focused on digital skills and AI awareness to boost the organization's digital literacy and readiness for AI technologies.",
           "priority": "High",
           "category": "People & Skills",
           "timeframe": "Short-term"
         },
         {
           "title": "Expand AI Implementation",
-          "description": "Move beyond initial pilot projects by identifying additional HR functions that can benefit from AI. Develop a strategic plan for phased AI integration in these areas, ensuring alignment with organizational goals and workforce capabilities.",
+          "description": "Transition from pilot AI projects to broader implementation across more HR functions, utilizing the established governance framework to ensure alignment and mitigate risks.",
           "priority": "Medium",
           "category": "AI Adoption",
           "timeframe": "Medium-term"
         },
         {
-          "title": "Full Automation of HR Processes",
-          "description": "Identify key HR processes that are currently only partially automated. Assess the feasibility of full automation, considering the potential benefits in efficiency and error reduction. Implement automation solutions where practically viable.",
+          "title": "Improve HR Data Quality",
+          "description": "Initiate projects to cleanse and standardize HR data to improve quality and accessibility, thereby enhancing the effectiveness of data-driven decision making.",
+          "priority": "Medium",
+          "category": "Data Readiness",
+          "timeframe": "Medium-term"
+        }
+      ],
+      "maturityLevel": "Moderately Mature - Shows substantial progress in several areas but still needs improvement in digital literacy and broader AI adoption.",
+      "nextSteps": [
+        "Conduct a detailed analysis of current digital skill gaps",
+        "Develop a strategic plan for AI integration in HR",
+        "Audit current HR data systems for quality and accessibility issues"
+      ]
+    }
+  },
+  {
+    "id": "1749631836559",
+    "organizationName": "njas",
+    "submittedAt": "2025-06-11T08:50:36.559Z",
+    "answers": {
+      "p1": 1,
+      "p2": 2,
+      "p3": 1,
+      "p4": 4,
+      "pr4": 3,
+      "pr3": 5,
+      "pr2": 5,
+      "pr1": 3,
+      "a2": 5,
+      "a1": 4,
+      "d1": 4,
+      "d3": 2,
+      "d4": 4,
+      "d2": 3,
+      "h1": 3
+    },
+    "comments": {},
+    "analysis": {
+      "overallScore": 3.1,
+      "categoryScores": {
+        "people-skills": 2,
+        "processes": 4,
+        "ai-adoption": 4.5,
+        "data-readiness": 3.25,
+        "hybrid-work": 3
+      },
+      "strengths": [
+        "Good training on new processes",
+        "Advanced AI adoption and mature governance",
+        "Consistency in HR processes across locations",
+        "Data mostly standardized and of high quality"
+      ],
+      "areasForImprovement": [
+        "Alignment of organizational design with strategic goals",
+        "Talent availability in all locations",
+        "Predictive insights in HR data systems",
+        "Data transparency and accessibility"
+      ],
+      "recommendations": [
+        {
+          "title": "Strategic Alignment Enhancement",
+          "description": "Revise organizational design to better align with HR's strategic goals, ensuring that structure supports both current and future business objectives.",
+          "priority": "High",
+          "category": "People & Skills",
+          "timeframe": "Medium-term"
+        },
+        {
+          "title": "Talent Sourcing Strategy",
+          "description": "Develop a robust talent sourcing strategy that leverages both local and global markets to mitigate the impact of severe talent shortages.",
+          "priority": "High",
+          "category": "People & Skills",
+          "timeframe": "Long-term"
+        },
+        {
+          "title": "Enhance Predictive Analytics",
+          "description": "Invest in advanced analytics and predictive modeling capabilities to enhance data-driven decision making in HR.",
+          "priority": "Medium",
+          "category": "Data Readiness",
+          "timeframe": "Medium-term"
+        },
+        {
+          "title": "Data Accessibility Improvement",
+          "description": "Implement initiatives to improve the transparency and accessibility of HR data to all relevant stakeholders.",
+          "priority": "Medium",
+          "category": "Data Readiness",
+          "timeframe": "Short-term"
+        }
+      ],
+      "maturityLevel": "Developing - Your organization shows potential in several advanced HR areas, particularly in AI adoption and process consistency, yet significant challenges remain in aligning people strategies and data capabilities with business needs.",
+      "nextSteps": [
+        "Conduct a thorough review of HR strategic alignment.",
+        "Initiate a global talent acquisition and retention program.",
+        "Plan and budget for the adoption of advanced analytics tools.",
+        "Audit current data management practices and implement necessary changes."
+      ]
+    }
+  },
+  {
+    "id": "1749639469950",
+    "organizationName": "Wipro",
+    "submittedAt": "2025-06-11T10:57:49.950Z",
+    "answers": {
+      "p1": 4,
+      "p2": 4,
+      "p3": 4,
+      "p4": 3,
+      "pr2": 4,
+      "pr1": 4,
+      "pr4": 3,
+      "pr3": 4,
+      "a1": 4,
+      "a2": 4,
+      "d1": 3,
+      "d2": 4,
+      "d3": 3,
+      "d4": 4,
+      "h1": 3
+    },
+    "comments": {},
+    "analysis": {
+      "overallScore": 3.7,
+      "categoryScores": {
+        "people-skills": 3.75,
+        "processes": 3.75,
+        "ai-adoption": 4,
+        "data-readiness": 3.5,
+        "hybrid-work": 3
+      },
+      "strengths": [
+        "Good alignment of organizational design with strategic HR goals",
+        "Strong adoption of AI in several HR functions",
+        "Most HR processes are well-documented and data-driven",
+        "High transparency and accessibility of HR data to stakeholders"
+      ],
+      "areasForImprovement": [
+        "Inconsistent monitoring of process controls",
+        "Training on new processes needs standardization",
+        "Moderate level of hybrid work model maturity",
+        "Some issues with data quality and lack of predictive insights"
+      ],
+      "recommendations": [
+        {
+          "title": "Enhance Training Programs",
+          "description": "Develop a structured and consistent training program across all organizational levels to ensure employees are well-equipped with the latest skills and processes.",
+          "priority": "High",
+          "category": "People & Skills",
+          "timeframe": "Short-term"
+        },
+        {
+          "title": "Standardize Process Controls",
+          "description": "Implement stricter, uniformly applied controls and regular audits to ensure process consistency and reliability across all geographical locations.",
           "priority": "Medium",
           "category": "Processes",
           "timeframe": "Medium-term"
         },
         {
-          "title": "Enhance Data-Driven Decision Making",
-          "description": "Improve the use of analytics in HR decision-making processes. This involves not only increasing the data-driven nature of these processes but also enhancing the quality and accessibility of the data used.",
+          "title": "Advance Hybrid Work Model",
+          "description": "Develop more robust policies and support systems that further facilitate flexible working arrangements, enhancing productivity and employee satisfaction.",
           "priority": "Medium",
+          "category": "Hybrid Work Model",
+          "timeframe": "Medium-term"
+        },
+        {
+          "title": "Improve Data Quality and Predictive Analytics",
+          "description": "Invest in advanced data management tools and training to enhance data quality and enable more sophisticated predictive analytics in HR operations.",
+          "priority": "High",
           "category": "Data Readiness",
           "timeframe": "Long-term"
         }
       ],
-      "maturityLevel": "Developing - The organization is making strides in modernizing its HR functions but has notable areas that require improvement to reach a more advanced level.",
+      "maturityLevel": "Advanced - The organization shows strong capabilities in several key HR areas but requires improvement in consistency and advanced analytics.",
       "nextSteps": [
-        "Conduct a detailed skills gap analysis to better understand the specific digital skills lacking within the workforce.",
-        "Leverage insights from the hybrid work model to inform other areas of HR transformation, promoting flexibility and employee satisfaction.",
-        "Monitor and evaluate the impact of newly implemented processes and technologies to ensure they deliver the expected benefits."
+        "Review and update the existing employee training modules.",
+        "Audit current process controls and implement a standardized monitoring system.",
+        "Research best practices for hybrid work models and adapt these into current policies.",
+        "Evaluate and invest in advanced data management and analytics solutions."
+      ]
+    }
+  },
+  {
+    "id": "1749640211139",
+    "organizationName": "Wipro",
+    "submittedAt": "2025-06-11T11:10:11.139Z",
+    "answers": {
+      "p1": 3,
+      "p2": 3,
+      "p3": 3,
+      "p4": 2,
+      "pr1": 2,
+      "pr2": 3,
+      "pr3": 3,
+      "pr4": 2,
+      "a1": 3,
+      "a2": 3,
+      "d1": 2,
+      "d2": 4,
+      "d3": 2,
+      "d4": 2,
+      "h1": 2
+    },
+    "comments": {},
+    "analysis": {
+      "overallScore": 2.6,
+      "categoryScores": {
+        "people-skills": 2.75,
+        "processes": 2.5,
+        "ai-adoption": 3,
+        "data-readiness": 2.5,
+        "hybrid-work": 2
+      },
+      "strengths": [
+        "Initial adoption of AI in HR functions",
+        "Moderate alignment of organizational design with strategic HR goals",
+        "Data transparency and accessibility"
+      ],
+      "areasForImprovement": [
+        "Training on new processes",
+        "Documentation of HR processes",
+        "Data standardization and quality",
+        "Advanced analytics and predictive capabilities",
+        "Efficiency of HR data processing and reporting",
+        "Maturity of the hybrid work model"
+      ],
+      "recommendations": [
+        {
+          "title": "Enhance Employee Training Programs",
+          "description": "Develop comprehensive training modules that not only cover basic operations but also align with strategic HR goals and current market trends.",
+          "priority": "High",
+          "category": "People & Skills",
+          "timeframe": "Short-term"
+        },
+        {
+          "title": "Improve HR Process Documentation",
+          "description": "Undertake a thorough documentation initiative to update and maintain detailed records of HR processes, ensuring consistency and clarity across locations.",
+          "priority": "Medium",
+          "category": "Processes",
+          "timeframe": "Medium-term"
+        },
+        {
+          "title": "Adopt Advanced Data Analytics",
+          "description": "Invest in advanced data analytics tools to enable predictive insights that can significantly enhance decision-making capabilities in HR operations.",
+          "priority": "High",
+          "category": "Data Readiness",
+          "timeframe": "Long-term"
+        },
+        {
+          "title": "Expand Hybrid Work Options",
+          "description": "Develop a more flexible hybrid work model that accommodates different work preferences and enhances productivity, while ensuring effective communication and collaboration.",
+          "priority": "Medium",
+          "category": "Hybrid Work Model",
+          "timeframe": "Medium-term"
+        }
+      ],
+      "maturityLevel": "Developing - There are foundational practices in place with moderate advancements in some areas, but significant improvements are needed.",
+      "nextSteps": [
+        "Conduct skills gap analysis to better understand training needs.",
+        "Review and update HR process documentation.",
+        "Explore and pilot advanced data analytics solutions.",
+        "Survey employees to assess needs and preferences for hybrid work."
       ]
     }
   }

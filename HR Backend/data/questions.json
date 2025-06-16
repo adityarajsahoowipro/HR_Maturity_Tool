@@ -10,58 +10,114 @@
       "questions": [
         {
           "id": "p1",
-          "text": "How would you rate your organization's digital literacy and AI readiness?",
+          "text": "How well does the organizational design align with the strategic goals of HR operations?",
           "category": "people-skills",
           "weight": 1,
           "options": [
-            {
-              "value": 1,
-              "text": "Very low - Most employees lack basic digital skills"
-            },
-            {
-              "value": 2,
-              "text": "Low - Limited digital literacy across the organization"
-            },
-            {
-              "value": 3,
-              "text": "Moderate - Average digital literacy with some AI awareness"
-            },
-            {
-              "value": 4,
-              "text": "High - Good digital literacy with AI understanding"
-            },
-            {
-              "value": 5,
-              "text": "Very high - Advanced digital literacy and AI readiness"
-            }
+        {
+          "value": 1,
+          "text": "Very low - No alignment with strategic goals"
+        },
+        {
+          "value": 2,
+          "text": "Low - Minimal alignment with strategic goals"
+        },
+        {
+          "value": 3,
+          "text": "Moderate - Some alignment with strategic goals"
+        },
+        {
+          "value": 4,
+          "text": "High - Good alignment with strategic goals"
+        },
+        {
+          "value": 5,
+          "text": "Very high - Full alignment with strategic goals and proactive design"
+        }
           ]
         },
         {
           "id": "p2",
-          "text": "To what extent does your organization have a skills-based approach to talent management?",
+          "text": "How flexible is the organizational design to adapt to changing needs?",
           "category": "people-skills",
           "weight": 1,
           "options": [
-            {
-              "value": 1,
-              "text": "Not at all - Traditional role-based approach only"
-            },
-            {
-              "value": 2,
-              "text": "Limited - Beginning to consider skills in some areas"
-            },
-            {
-              "value": 3,
-              "text": "Moderate - Hybrid of role and skills-based approaches"
-            },
-            {
-              "value": 4,
-              "text": "Significant - Primarily skills-based with some role elements"
-            },
-            {
-              "value": 5,
-              "text": "Comprehensive - Fully skills-based talent management"
-            }
+        {
+          "value": 1,
+          "text": "Very limited - Rigid structure with no flexibility"
+        },
+        {
+          "value": 2,
+          "text": "Limited - Some flexibility but primarily role-based"
+        },
+        {
+          "value": 3,
+          "text": "Moderate - Mix of role-based and skills-based design"
+        },
+        {
+          "value": 4,
+          "text": "Good - Mostly skills-based with some role flexibility"
+        },
+        {
+          "value": 5,
+          "text": "Very good - Fully skills-based design with high adaptability"
+        }
+          ]
+        },
+        {
+          "id": "p3",
+          "text": "How would the labour / talent availability across all existing GBS locations be described?",
+          "category": "people-skills",
+          "weight": 1,
+          "options": [
+        {
+          "value": 1,
+          "text": "Very low - Severe talent shortages in all locations"
+        },
+        {
+          "value": 2,
+          "text": "Low - Limited talent availability in most locations"
+        },
+        {
+          "value": 3,
+          "text": "Moderate - Average talent availability across locations"
+        },
+        {
+          "value": 4,
+          "text": "High - Good talent availability in most locations"
+        },
+        {
+          "value": 5,
+          "text": "Very high - Abundant talent availability across all locations"
+        }
+          ]
+        },
+        {
+          "id": "p4",
+          "text": "How well are employees trained on new processes?",
+          "category": "people-skills",
+          "weight": 1,
+          "options": [
+        {
+          "value": 1,
+          "text": "Not at all - No training provided"
+        },
+        {
+          "value": 2,
+          "text": "Limited - Basic training provided"
+        },
+        {
+          "value": 3,
+          "text": "Moderate - Training provided but inconsistent"
+        },
+        {
+          "value": 4,
+          "text": "Good - Regular training sessions held"
+        },
+        {
+          "value": 5,
+          "text": "Excellent - Comprehensive training with continuous updates"
+        }
           ]
         }
       ]
@@ -73,30 +129,30 @@
       "questions": [
         {
           "id": "pr1",
-          "text": "How automated are your core HR processes?",
+          "text": "How well-documented are your organization's HR processes?",
           "category": "processes",
           "weight": 1,
           "options": [
-            {
-              "value": 1,
-              "text": "Not automated - Primarily manual processes"
-            },
-            {
-              "value": 2,
-              "text": "Minimally automated - Basic digital tools only"
-            },
-            {
-              "value": 3,
-              "text": "Partially automated - Some key processes automated"
-            },
-            {
-              "value": 4,
-              "text": "Mostly automated - Most processes have automation"
-            },
-            {
-              "value": 5,
-              "text": "Fully automated - End-to-end process automation with AI optimization"
-            }
+        {
+          "value": 1,
+          "text": "Not documented - No formal documentation exists"
+        },
+        {
+          "value": 2,
+          "text": "Poorly documented - Limited or outdated documentation"
+        },
+        {
+          "value": 3,
+          "text": "Partially documented - Some processes are documented"
+        },
+        {
+          "value": 4,
+          "text": "Mostly documented - Most processes have up-to-date documentation"
+        },
+        {
+          "value": 5,
+          "text": "Fully documented - All processes are thoroughly documented and regularly updated"
+        }
           ]
         },
         {
@@ -105,26 +161,82 @@
           "category": "processes",
           "weight": 1,
           "options": [
-            {
-              "value": 1,
-              "text": "Not data-driven - Decisions based on intuition"
-            },
-            {
-              "value": 2,
-              "text": "Minimally data-driven - Basic reporting only"
-            },
-            {
-              "value": 3,
-              "text": "Partially data-driven - Some analytics used"
-            },
-            {
-              "value": 4,
-              "text": "Mostly data-driven - Regular use of analytics"
-            },
-            {
-              "value": 5,
-              "text": "Fully data-driven - Advanced analytics and predictive modeling"
-            }
+        {
+          "value": 1,
+          "text": "Not data-driven - Decisions based on intuition"
+        },
+        {
+          "value": 2,
+          "text": "Minimally data-driven - Basic reporting only"
+        },
+        {
+          "value": 3,
+          "text": "Partially data-driven - Some analytics used"
+        },
+        {
+          "value": 4,
+          "text": "Mostly data-driven - Regular use of analytics"
+        },
+        {
+          "value": 5,
+          "text": "Fully data-driven - Advanced analytics and predictive modeling"
+        }
+          ]
+        },
+        {
+          "id": "pr3",
+          "text": "How would you rate the consistency of this process across different geographical locations?",
+          "category": "processes",
+          "weight": 1,
+          "options": [
+        {
+          "value": 1,
+          "text": "Very inconsistent - Significant variation across locations"
+        },
+        {
+          "value": 2,
+          "text": "Inconsistent - Some locations follow different processes"
+        },
+        {
+          "value": 3,
+          "text": "Moderately consistent - Most locations follow similar processes"
+        },
+        {
+          "value": 4,
+          "text": "Consistent - Minor variations, but overall process is similar"
+        },
+        {
+          "value": 5,
+          "text": "Highly consistent - Standardized process across all locations"
+        }
+          ]
+        },
+        {
+          "id": "pr4",
+          "text": "How effective are the controls in place for monitoring and managing the process?",
+          "category": "processes",
+          "weight": 1,
+          "options": [
+        {
+          "value": 1,
+          "text": "Very ineffective - No controls or monitoring in place"
+        },
+        {
+          "value": 2,
+          "text": "Ineffective - Minimal controls, rarely monitored"
+        },
+        {
+          "value": 3,
+          "text": "Somewhat effective - Basic controls, inconsistently monitored"
+        },
+        {
+          "value": 4,
+          "text": "Effective - Controls in place and regularly monitored"
+        },
+        {
+          "value": 5,
+          "text": "Highly effective - Comprehensive controls with proactive monitoring and management"
+        }
           ]
         }
       ]
@@ -199,30 +311,114 @@
       "questions": [
         {
           "id": "d1",
-          "text": "How would you rate the quality and accessibility of your HR data?",
+          "text": "How would you describe your organization's level of data standardization / Quality of data in HR operations?",
           "category": "data-readiness",
           "weight": 1,
           "options": [
-            {
-              "value": 1,
-              "text": "Poor - Inconsistent, hard to access data"
-            },
-            {
-              "value": 2,
-              "text": "Below average - Some data quality issues"
-            },
-            {
-              "value": 3,
-              "text": "Average - Decent quality with some accessibility challenges"
-            },
-            {
-              "value": 4,
-              "text": "Good - High quality, easily accessible data"
-            },
-            {
-              "value": 5,
-              "text": "Excellent - Real-time, high-quality data with advanced analytics"
-            }
+        {
+          "value": 1,
+          "text": "Very poor - Data is inconsistent, unstandardized, and unreliable"
+        },
+        {
+          "value": 2,
+          "text": "Poor - Some data standards exist but significant quality issues remain"
+        },
+        {
+          "value": 3,
+          "text": "Average - Data is somewhat standardized with occasional quality issues"
+        },
+        {
+          "value": 4,
+          "text": "Good - Data is mostly standardized and of high quality"
+        },
+        {
+          "value": 5,
+          "text": "Excellent - Data is fully standardized, high quality, and trusted for decision-making"
+        }
+          ]
+        },
+        {
+          "id": "d2",
+          "text": "To what extent is HR data transparent and accessible to relevant stakeholders in your organization?",
+          "category": "data-readiness",
+          "weight": 1,
+          "options": [
+        {
+          "value": 1,
+          "text": "Very low - Data is not accessible or transparent to stakeholders"
+        },
+        {
+          "value": 2,
+          "text": "Low - Limited access to data, transparency issues"
+        },
+        {
+          "value": 3,
+          "text": "Moderate - Some data is accessible, but transparency is inconsistent"
+        },
+        {
+          "value": 4,
+          "text": "High - Most data is accessible and transparent to stakeholders"
+        },
+        {
+          "value": 5,
+          "text": "Very high - All relevant data is fully accessible and transparent to stakeholders"
+        }
+          ]
+        },
+        {
+          "id": "d3",
+          "text": "What level of advanced analytics and predictive insights does your HR data system offer?",
+          "category": "data-readiness",
+          "weight": 1,
+          "options": [
+        {
+          "value": 1,
+          "text": "Very low - No advanced analytics or predictive insights available"
+        },
+        {
+          "value": 2,
+          "text": "Low - Basic analytics only, no predictive capabilities"
+        },
+        {
+          "value": 3,
+          "text": "Moderate - Some advanced analytics, limited predictive insights"
+        },
+        {
+          "value": 4,
+          "text": "High - Advanced analytics with some predictive capabilities"
+        },
+        {
+          "value": 5,
+          "text": "Very high - Comprehensive advanced analytics and robust predictive insights available"
+        }
+          ]
+        },
+        {
+          "id": "d4",
+          "text": "How efficient is your HR data processing and reporting?",
+          "category": "data-readiness",
+          "weight": 1,
+          "options": [
+        {
+          "value": 1,
+          "text": "Very inefficient - Data processing is slow and reporting is manual"
+        },
+        {
+          "value": 2,
+          "text": "Inefficient - Some automation, but significant manual effort required"
+        },
+        {
+          "value": 3,
+          "text": "Moderately efficient - Mostly automated with occasional manual tasks"
+        },
+        {
+          "value": 4,
+          "text": "Efficient - Highly automated data processing and reporting"
+        },
+        {
+          "value": 5,
+          "text": "Very efficient - Fully automated, real-time data processing and reporting with minimal manual intervention"
+        }
           ]
         }
       ]
@@ -264,3 +460,4 @@
     }
   ]
 }
+ 

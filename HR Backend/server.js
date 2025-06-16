@@ -199,6 +199,149 @@ app.get('/api/results', async (req, res) => {
 });
 
 // Helper functions
+// generate industry comparision score
+app.post('/api/industry-comparison', async (req, res) => {
+
+  console.log('**************Received request for industry comparison*************');
+
+  try {
+    const { organizationName } = req.body;
+    if (!organizationName) {
+      return res.status(400).json({ error: 'Organization name is required' });
+    }
+
+    // Build the prompt
+    const prompt = `
+You are an HR industry analyst AI. For the organization "${organizationName}", identify its main real-world competitors in the market (do not use a fixed list).
+Compare the HR maturity and digital transformation scores of "${organizationName}" and its top competitors.
+For each company, provide a JSON object with the following keys for these categories: "People & Skills", "Processes", "Systems & Technology", "AI Adoption", "Data Readiness", "Hybrid Work Model".
+Each category should have a score from 1 to 5 (with 5 being industry-leading).
+Return a JSON array like:
+[
+  {
+    "organization": "Wipro",
+    "scores": {
+      "People & Skills": 3.2,
+      "Processes": 2.8,
+      "Systems & Technology": 3.5,
+      "AI Adoption": 2.6,
+      "Data Readiness": 3.0,
+      "Hybrid Work Model": 3.8
+    }
+  },
+  ...
+]
+Base your analysis on public data, industry reports, and best estimates as of 2025.
+`;
+
+    // Call Lab45 AI
+    const response = await fetch("https://api.lab45.ai/v1.1/skills/completion/query", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${process.env.LAB45_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        messages: [
+          {
+            role: "user",
+            content: prompt
+          }
+        ],
+        skill_parameters: {
+          model_name: "gpt-4",
+          emb_type: "openai",
+          max_output_tokens: 800,
+          temperature: 0.2
+        },
+        stream_response: false
+      }),
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      return res.status(500).json({ error: `Lab45 API error: ${response.status} - ${errorText}` });
+    }
+
+  const data = await response.json();
+  console.log('AI response data:', JSON.stringify(data, null, 2));
+  let content = data?.data?.content || data?.choices?.[0]?.message?.content || "";
+
+// Remove Markdown code block if present
+// let content = data?.data?.content || data?.choices?.[0]?.message?.content || "";
+
+// Remove Markdown code block if present (handles ```json and ```)
+content = content.replace(/```json/g, "").replace(/```/g, "").trim();
+
+
+// Try to extract JSON array from content
+const jsonStart = content.indexOf("[");
+const jsonEnd = content.lastIndexOf("]") + 1;
+const jsonString = (jsonStart !== -1 && jsonEnd !== -1 && jsonEnd > jsonStart)
+  ? content.slice(jsonStart, jsonEnd)
+  : "";
+
+if (!jsonString) {
+  console.error("No valid JSON array found in AI response:", content);
+  return res.status(500).json({ error: "AI did not return a valid JSON array." });
+}
+
+let parsed;
+console.log("Parsing AI JSON response:", jsonString);
+
+try {
+  parsed = JSON.parse(jsonString);
+} catch (err) {
+  console.error("Error parsing AI JSON:", err, "Content:", jsonString);
+  return res.status(500).json({ error: "Failed to parse AI JSON response." });
+}
+
+res.json({ data: parsed });
+console.log('Industry comparison response:', JSON.stringify(parsed, null, 2));
+console.log(`Industry comparison generated successfully for: ${organizationName}`);
+  } catch (error) {
+    console.error("Error in /api/industry-comparison:", error);
+  }
+});
+
+// let content = data?.choices?.[0]?.message?.content || "";
+
+// // Try to extract JSON array from content
+// const jsonStart = content.indexOf("[");
+// const jsonEnd = content.lastIndexOf("]") + 1;
+// const jsonString = (jsonStart !== -1 && jsonEnd !== -1 && jsonEnd > jsonStart)
+//   ? content.slice(jsonStart, jsonEnd)
+//   : "";
+
+// if (!jsonString) {
+//   console.error("No valid JSON array found in AI response:", content);
+//   return res.status(500).json({ error: "AI did not return a valid JSON array." });
+// }
+
+// let parsed;
+// console.log("Parsing AI JSON response:", jsonString);
+
+// try {
+//   parsed = JSON.parse(jsonString);
+// } catch (err) {
+//   console.error("Error parsing AI JSON:", err, "Content:", jsonString);
+//   return res.status(500).json({ error: "Failed to parse AI JSON response." });
+// }
+
+// res.json({ data: parsed });
+// console.log(res.json({ data: parsed }));
+//     console.log('Industry comparison response:', JSON.stringify(parsed, null, 2));
+
+// console.log(`Industry comparison generated successfully for: ${organizationName}`);
+
+
+//   } catch (error) {
+//     console.error("Error in /api/industry-comparison:", error);
+//     res.status(500).json({ error: "Failed to fetch industry comparison from AI" });
+//   }
+// });
+
+
 
 // Generate AI recommendations using Lab45
 async function generateLab45Recommendations(currentRecommendations = [], organizationContext = {}) {

@@ -12,7 +12,7 @@ type RecommendationProps = {
   detailed?: boolean
 }
 
-type Recommendation = {
+export type Recommendation = {
   title: string
   description: string
   impact: "High" | "Medium" | "Low"
@@ -22,7 +22,7 @@ type Recommendation = {
   aiGenerated?: boolean
 }
 
-const baseRecommendations: Recommendation[] = [
+export const baseRecommendations: Recommendation[] = [
   {
     title: "Implement AI-powered skills assessment",
     description:
@@ -71,9 +71,19 @@ const baseRecommendations: Recommendation[] = [
 ]
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001/api"
+type RecommendationPanelProps = {
+  recommendations: Recommendation[]
+  setRecommendations: React.Dispatch<React.SetStateAction<Recommendation[]>>
+  detailed: boolean
+  short?: boolean
+}
 
-export function RecommendationPanel({ detailed = false }: RecommendationProps) {
-  const [recommendations, setRecommendations] = useState<Recommendation[]>(baseRecommendations)
+export function RecommendationPanel({
+  recommendations,
+  setRecommendations,
+  detailed = false,
+  short = false, }: RecommendationPanelProps) {
+  // const [recommendations, setRecommendations] = useState<Recommendation[]>(baseRecommendations)
   const [isGenerating, setIsGenerating] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [expandedRec, setExpandedRec] = useState<number | null>(null)
@@ -103,60 +113,107 @@ export function RecommendationPanel({ detailed = false }: RecommendationProps) {
       }
 
       const data = await response.json()
+      console.log("Generated recommendations:________-------------------______________________-", data);
+      let recommendationsArray: any[] = [];
 
-      if (data.success && data.recommendations) {
-        const newRecommendations = data.recommendations.map((rec: any) => ({
+      // Case 1: Your backend format
+      if (
+        data.success &&
+        data.recommendations &&
+        Array.isArray(data.recommendations.recommendations)
+      ) {
+        recommendationsArray = data.recommendations.recommendations;
+      }
+
+      // Case 2: Lab45 format (content is a stringified JSON)
+      else if (
+        data.data &&
+        typeof data.data.content === "string"
+      ) {
+        try {
+          const parsed = JSON.parse(data.data.content);
+          if (Array.isArray(parsed.recommendations)) {
+            recommendationsArray = parsed.recommendations;
+          }
+        } catch (e) {
+          // Handle JSON parse error
+          throw new Error("Failed to parse Lab45 recommendations");
+        }
+      }
+
+      if (recommendationsArray.length > 0) {
+        const newRecommendations = recommendationsArray.map((rec: any) => ({
           ...rec,
           aiGenerated: true,
-        }))
-        setRecommendations((prev) => [...prev, ...newRecommendations])
+        }));
+        setRecommendations((prev) => [...prev, ...newRecommendations]);
       } else {
-        throw new Error("Invalid response format")
-      }
-    } catch (err) {
-      console.error("Error generating recommendations:", err)
-      setError("Failed to generate new recommendations. Please try again.")
 
-      // Fallback: Add some predefined AI-generated recommendations
-      const fallbackRecommendations: Recommendation[] = [
-        {
-          title: "Implement predictive analytics for talent retention",
-          description:
-            "Use AI to analyze employee data and predict turnover risk, enabling proactive retention strategies.",
-          impact: "High",
-          timeframe: "Medium-term",
-          category: "AI Adoption",
-          aiGenerated: true,
-          steps: [
-            "Collect and clean historical employee data",
-            "Select predictive analytics platform",
-            "Train models on historical turnover data",
-            "Implement early warning system",
-            "Create intervention protocols for at-risk employees",
-          ],
-        },
-        {
-          title: "Deploy conversational AI for employee support",
-          description: "Implement an AI chatbot to handle routine HR inquiries and provide 24/7 employee support.",
-          impact: "Medium",
-          timeframe: "Short-term",
-          category: "Systems & Technology",
-          aiGenerated: true,
-          steps: [
-            "Analyze common HR inquiries and FAQs",
-            "Select conversational AI platform",
-            "Train chatbot on HR knowledge base",
-            "Integrate with existing HR systems",
-            "Launch pilot and gather feedback",
-          ],
-        },
-      ]
-      setRecommendations((prev) => [...prev, ...fallbackRecommendations])
+
+        //      if (
+        //   data.success &&
+        //   data.recommendations &&
+        //   Array.isArray(data.recommendations.recommendations)
+        // ){
+        //        const newRecommendations = data.recommendations.recommendations.map((rec: any) => ({
+        //     ...rec,
+        //     aiGenerated: true,
+        //   }))
+        //         setRecommendations((prev) => [...prev, ...newRecommendations])
+        //       } else {
+        //         throw new Error("Invalid response format")
+        //       }
+        //     } catch (err) {
+        //       console.error("Error generating recommendations:", err)
+        //       setError("Failed to generate new recommendations. Please try again.")
+
+        // Fallback: Add some predefined AI-generated recommendations
+        const fallbackRecommendations: Recommendation[] = [
+          {
+            title: "Implement predictive analytics for talent retention",
+            description:
+              "Use AI to analyze employee data and predict turnover risk, enabling proactive retention strategies.",
+            impact: "High",
+            timeframe: "Medium-term",
+            category: "AI Adoption",
+            aiGenerated: true,
+            steps: [
+              "Collect and clean historical employee data",
+              "Select predictive analytics platform",
+              "Train models on historical turnover data",
+              "Implement early warning system",
+              "Create intervention protocols for at-risk employees",
+            ],
+          },
+          {
+            title: "Deploy conversational AI for employee support",
+            description: "Implement an AI chatbot to handle routine HR inquiries and provide 24/7 employee support.",
+            impact: "Medium",
+            timeframe: "Short-term",
+            category: "Systems & Technology",
+            aiGenerated: true,
+            steps: [
+              "Analyze common HR inquiries and FAQs",
+              "Select conversational AI platform",
+              "Train chatbot on HR knowledge base",
+              "Integrate with existing HR systems",
+              "Launch pilot and gather feedback",
+            ],
+          },
+        ]
+        setRecommendations((prev) => [...prev, ...fallbackRecommendations])
+      }
     } finally {
       setIsGenerating(false)
     }
   }
-
+  if (recommendations.length === 0) {
+    return (
+      <div className="text-muted-foreground text-center py-8">
+        Complete the assessment to see your personalized recommendations.
+      </div>
+    )
+  }
   const toggleExpanded = (index: number) => {
     setExpandedRec(expandedRec === index ? null : index)
   }
@@ -172,9 +229,8 @@ export function RecommendationPanel({ detailed = false }: RecommendationProps) {
       {recommendations.map((rec, index) => (
         <Card
           key={index}
-          className={`border-l-4 transition-all duration-200 ${
-            rec.aiGenerated ? "bg-gradient-to-r from-purple-50 to-blue-50 border-l-purple-500" : ""
-          }`}
+          className={`border-l-4 transition-all duration-200 ${rec.aiGenerated ? "bg-gradient-to-r from-purple-50 to-blue-50 border-l-purple-500" : ""
+            }`}
           style={{ borderLeftColor: !rec.aiGenerated ? (rec.impact === "High" ? "#10b981" : "#f59e0b") : undefined }}
         >
           <CardHeader className="pb-2">
@@ -219,11 +275,11 @@ export function RecommendationPanel({ detailed = false }: RecommendationProps) {
                   ))}
                 </ul>
 
-                <div className="mt-4 flex justify-end">
+                {/* <div className="mt-4 flex justify-end">
                   <Button className="gap-1">
                     View Detailed Plan <ArrowRight className="h-4 w-4" />
                   </Button>
-                </div>
+                </div> */}
               </div>
             )}
 
