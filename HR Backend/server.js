@@ -205,14 +205,14 @@ app.post('/api/industry-comparison', async (req, res) => {
   console.log('**************Received request for industry comparison*************');
 
   try {
-    const { organizationName } = req.body;
-    if (!organizationName) {
-      return res.status(400).json({ error: 'Organization name is required' });
-    }
+    const { organizationName, domain } = req.body;
+if (!organizationName || !domain) {
+  return res.status(400).json({ error: 'Organization name and domain are required' });
+}
 
     // Build the prompt
     const prompt = `
-You are an HR industry analyst AI. For the organization "${organizationName}", identify its main real-world competitors in the market (do not use a fixed list).
+You are an HR industry analyst AI. For the organization "${organizationName}" in the "${domain}" domain, identify its main real-world competitors in the market (do not use a fixed list).
 Compare the HR maturity and digital transformation scores of "${organizationName}" and its top competitors.
 For each company, provide a JSON object with the following keys for these categories: "People & Skills", "Processes", "Systems & Technology", "AI Adoption", "Data Readiness", "Hybrid Work Model".
 Each category should have a score from 1 to 5 (with 5 being industry-leading).

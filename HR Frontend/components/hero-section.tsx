@@ -6,7 +6,7 @@ import { Sparkles, Brain, TrendingUp, Zap } from "lucide-react"
 
 export function HeroSection() {
   const scrollToAssessment = () => {
-    const assessmentTab = document.querySelector('[value="assessment"]') as HTMLElement
+    const assessmentTab = document.querySelector('[value="backend-assessment-form"]') as HTMLElement
     if (assessmentTab) {
       assessmentTab.click()
       window.scrollTo({ top: 0, behavior: "smooth" })

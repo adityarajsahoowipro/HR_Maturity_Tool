@@ -10,6 +10,7 @@ import { HeroSection } from "@/components/hero-section"
 import { useEffect, useState } from "react"
 import { RecommendationPanel } from "@/components/recommendation-panel"
 import type { Recommendation } from "@/components/recommendation-panel"
+import { Domain } from "domain"
 
 export default function Home() {
   const [recommendations, setRecommendations] = useState<Recommendation[]>([])
@@ -18,6 +19,7 @@ export default function Home() {
   const [showOrgModal, setShowOrgModal] = useState(true)
   const [organizationName, setOrganizationName] = useState("")
   const [username, setUsername] = useState("")
+  const [domain, setDomain] = useState("")
   const [rawIndustryArray, setRawIndustryArray] = useState<any[] | undefined>(undefined);
   const [industryData, setIndustryData] = useState<{
     industry: string;
@@ -56,6 +58,12 @@ export default function Home() {
               placeholder="Username"
               className="w-full mb-4 p-2 border border-gray-300 rounded font-medium"
             />
+            <input
+              value={domain}
+              onChange={e => setDomain(e.target.value)}
+              placeholder="Domain"
+              className="w-full mb-4 p-2 border border-gray-300 rounded font-medium"
+            />
             <button
               className={`w-full bg-emerald-600 text-white py-2 rounded font-bold transition-colors ${organizationName.trim() && username.trim()
                 ? "hover:bg-emerald-700 cursor-pointer"
@@ -70,7 +78,7 @@ export default function Home() {
                 const res = await fetch("http://localhost:3001/api/industry-comparison", {
                   method: "POST",
                   headers: { "Content-Type": "application/json" },
-                  body: JSON.stringify({ organizationName }),
+                  body: JSON.stringify({ organizationName, domain }),
                 });
                 const data = await res.json();
                 const arr = data.data;
@@ -263,7 +271,7 @@ export default function Home() {
                 <CardDescription>See how your organization compares to industry benchmarks</CardDescription>
               </CardHeader>
               <CardContent>
-                <IndustryComparison organizationName={organizationName} industryData={industryData}  rawIndustryArray={rawIndustryArray} />
+                <IndustryComparison organizationName={organizationName} industryData={industryData}  rawIndustryArray={rawIndustryArray} domain={domain}/>
               </CardContent>
             </Card>
           </TabsContent>

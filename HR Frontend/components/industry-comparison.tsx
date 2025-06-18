@@ -24,11 +24,13 @@ export function IndustryComparison({
   industryData,
   yourScores,
   rawIndustryArray,
+  domain
 }: {
   organizationName: string
   yourScores?: Record<string, number>
   industryData?: any
   rawIndustryArray?: any[]
+  domain: string
 }) {
   const chartRef = useRef<HTMLCanvasElement>(null)
   const chartInstance = useRef<Chart | null>(null)
